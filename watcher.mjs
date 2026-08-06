@@ -38,22 +38,19 @@ async function send(text) {
   return true;
 }
 
-async function closedBars(symbol, interval) {
-  const r = await fetch(`https://fapi.binance.com/fapi/v1/klines?symbol=${symbol}&interval=${interval}&limit=3`);
-  if (!r.ok) throw new Error(`binance HTTP ${r.status}`);
-  const k = await r.json();
-  return k.slice(0, -1).map(b => ({
-    openTime: b[0], open: +b[1], high: +b[2], low: +b[3], close: +b[4], closeTime: b[6],
-  }));
-}
+// Data source selection lives in sources.mjs - Binance 451s from US cloud IPs,
+// so this falls back through other exchanges automatically.
+import { fetchBars } from './sources.mjs';
 
 let changed = false;
+let loggedSource = false;
 
 for (const rule of cfg.rules || []) {
   try {
-    const bars = await closedBars(rule.symbol, rule.interval);
+    const { bars, source } = await fetchBars(rule.symbol, rule.interval);
     const last = bars.at(-1);
     if (!last) continue;
+    if (!loggedSource) { console.log(`data source: ${source}`); loggedSource = true; }
 
     const key = rule.id;
     if (state[key]?.firedAt === last.openTime) { console.log(`skip   ${key} (already handled this bar)`); continue; }

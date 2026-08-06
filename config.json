@@ -1,0 +1,50 @@
+{
+  "_comment": "Alert rules for the cloud watcher. NO CREDENTIALS HERE - the Telegram token comes from GitHub encrypted secrets.",
+
+  "rules": [
+    {
+      "id": "btc-long-trigger",
+      "title": "BTC LONG TRIGGER",
+      "symbol": "BTCUSDT",
+      "interval": "4h",
+      "level": 65391.3,
+      "direction": "above",
+      "notify_wick": true,
+      "repeat": false,
+      "note": "CHoCH confirmed. Wait for the retrace toward the 50% of the displacement leg - do not chase the close. Stop below 62268. Target = nearest pool clearing 1.0 R:R."
+    },
+    {
+      "id": "btc-invalidation",
+      "title": "BTC LONG DEAD / SHORT ON",
+      "symbol": "BTCUSDT",
+      "interval": "4h",
+      "level": 62228.8,
+      "direction": "below",
+      "notify_wick": true,
+      "repeat": false,
+      "note": "Sell-side BOS - continuation of the daily downtrend. Long invalidated. Short: wait for the bounce, stop above the failed high, target 57759."
+    },
+    {
+      "id": "sui-long-trigger",
+      "title": "SUI LONG TRIGGER",
+      "symbol": "SUIUSDT",
+      "interval": "4h",
+      "level": 0.7074,
+      "direction": "above",
+      "notify_wick": true,
+      "repeat": false,
+      "note": "CHoCH confirmed on SUI. Same playbook: wait for the retrace."
+    },
+    {
+      "id": "sui-invalidation",
+      "title": "SUI LONG DEAD",
+      "symbol": "SUIUSDT",
+      "interval": "4h",
+      "level": 0.6755,
+      "direction": "below",
+      "notify_wick": true,
+      "repeat": false,
+      "note": "Sweep low broken on a close. Setup invalidated."
+    }
+  ]
+}

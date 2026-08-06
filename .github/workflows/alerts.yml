@@ -21,9 +21,11 @@ jobs:
     timeout-minutes: 5
 
     steps:
-      - uses: actions/checkout@v4
+      # v5 of both actions targets the Node 24 runtime. v4 targeted Node 20,
+      # which GitHub deprecated - it still ran, but emitted a warning on every run.
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: '22'
 

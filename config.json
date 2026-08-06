@@ -3,17 +3,6 @@
 
   "rules": [
     {
-      "id": "deploy-test",
-      "title": "DEPLOY TEST - delete me",
-      "symbol": "BTCUSDT",
-      "interval": "4h",
-      "level": 1000,
-      "direction": "above",
-      "notify_wick": false,
-      "repeat": false,
-      "note": "If this arrived on your phone, the cloud watcher can reach Telegram. Remove this rule now."
-    },
-    {
       "id": "btc-long-trigger",
       "title": "BTC LONG TRIGGER",
       "symbol": "BTCUSDT",

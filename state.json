@@ -1,1 +1,6 @@
-{}
+{
+  "deploy-test": {
+    "firedAt": 1785960000000,
+    "done": true
+  }
+}

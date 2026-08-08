@@ -25,6 +25,28 @@
       "note": "Sell-side BOS - continuation of the daily downtrend. Long invalidated. Short: wait for the bounce, stop above the failed high, target 57759."
     },
     {
+      "id": "btc-short-choch",
+      "title": "BTC SHORT CONFIRMED",
+      "symbol": "BTCUSDT",
+      "interval": "4h",
+      "level": 64111,
+      "direction": "below",
+      "notify_wick": true,
+      "repeat": false,
+      "note": "CHoCH confirmed on the close. Sweep was 64948.8 taken on 7 Aug, wick to 65358. Now wait for the retrace to ~64734 - do not chase. Stop 65403. Target 64010. R:R 1.08."
+    },
+    {
+      "id": "btc-short-invalidation",
+      "title": "BTC SHORT DEAD",
+      "symbol": "BTCUSDT",
+      "interval": "4h",
+      "level": 65358,
+      "direction": "above",
+      "notify_wick": true,
+      "repeat": false,
+      "note": "Closed above the sweep wick. Short setup invalidated - the sweep failed and buyers took control."
+    },
+    {
       "id": "sui-pullback-watch",
       "title": "SUI PULLBACK - watch for short setup",
       "symbol": "SUIUSDT",

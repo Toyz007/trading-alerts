@@ -25,26 +25,37 @@
       "note": "Sell-side BOS - continuation of the daily downtrend. Long invalidated. Short: wait for the bounce, stop above the failed high, target 57759."
     },
     {
-      "id": "sui-long-trigger",
-      "title": "SUI LONG TRIGGER",
+      "id": "sui-pullback-watch",
+      "title": "SUI PULLBACK - watch for short setup",
       "symbol": "SUIUSDT",
       "interval": "4h",
-      "level": 0.7074,
+      "level": 0.6787,
       "direction": "above",
-      "notify_wick": true,
-      "repeat": false,
-      "note": "CHoCH confirmed on SUI. Same playbook: wait for the retrace."
+      "notify_wick": false,
+      "repeat": true,
+      "note": "Price back into the pool zone. NOT an entry. Watch for a wick above 0.6787 or 0.6861 that CLOSES back below - that is the sweep. Then need a close below the prior low to confirm. Only then enter on the bounce."
     },
     {
-      "id": "sui-invalidation",
-      "title": "SUI LONG DEAD",
+      "id": "sui-continuation",
+      "title": "SUI SELL-SIDE BOS",
       "symbol": "SUIUSDT",
       "interval": "4h",
-      "level": 0.6755,
+      "level": 0.6621,
       "direction": "below",
       "notify_wick": true,
       "repeat": false,
-      "note": "Sweep low broken on a close. Setup invalidated."
+      "note": "Closed below the 4H range low - downtrend continuation. Next sell-side pool is 0.6503 (daily low). Still not an entry on its own: a short needs a sweep of a HIGH first, then this break, then a retrace."
+    },
+    {
+      "id": "sui-decision-level",
+      "title": "SUI 0.7000 - DECISION LEVEL",
+      "symbol": "SUIUSDT",
+      "interval": "4h",
+      "level": 0.7,
+      "direction": "above",
+      "notify_wick": true,
+      "repeat": false,
+      "note": "CLOSED ABOVE = long confirmed, bear thesis dead, stop looking for shorts. (A WICK-ONLY message at this level means the opposite: buy-side sweep, SHORT setup forming - then wait for a close below a recent low, stop above the wick, targets 0.6787 / 0.6722 / 0.6676.)"
     }
   ]
 }

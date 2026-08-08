@@ -47,26 +47,26 @@
       "note": "Closed above the sweep wick. Short setup invalidated - the sweep failed and buyers took control."
     },
     {
-      "id": "sui-pullback-watch",
-      "title": "SUI PULLBACK - watch for short setup",
+      "id": "sui-long-entry-zone",
+      "title": "SUI LONG - ENTRY ZONE REACHED",
       "symbol": "SUIUSDT",
       "interval": "4h",
-      "level": 0.6787,
-      "direction": "above",
+      "level": 0.6855,
+      "direction": "below",
       "notify_wick": false,
-      "repeat": true,
-      "note": "Price back into the pool zone. NOT an entry. Watch for a wick above 0.6787 or 0.6861 that CLOSES back below - that is the sweep. Then need a close below the prior low to confirm. Only then enter on the bounce."
+      "repeat": false,
+      "note": "Retrace has reached the 50% of the displacement leg. CHoCH was confirmed 8 Aug at 0.7004. Long entry ~0.6855, stop 0.6629, target 0.7083. R:R only 1.01 - thin. Note price must still be holding above 0.6639 for the setup to be alive."
     },
     {
-      "id": "sui-continuation",
-      "title": "SUI SELL-SIDE BOS",
+      "id": "sui-long-invalidation",
+      "title": "SUI LONG DEAD",
       "symbol": "SUIUSDT",
       "interval": "4h",
-      "level": 0.6621,
+      "level": 0.6639,
       "direction": "below",
       "notify_wick": true,
       "repeat": false,
-      "note": "Closed below the 4H range low - downtrend continuation. Next sell-side pool is 0.6503 (daily low). Still not an entry on its own: a short needs a sweep of a HIGH first, then this break, then a retrace."
+      "note": "Closed below the sweep low of 7 Aug. The long is invalidated - the sweep failed. Next sell-side pools 0.6621 then 0.6503 (daily low)."
     },
     {
       "id": "sui-decision-level",

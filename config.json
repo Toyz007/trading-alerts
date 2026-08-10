@@ -48,14 +48,39 @@
     },
     {
       "id": "sui-long-entry-zone",
-      "title": "SUI LONG - ENTRY ZONE REACHED",
+      "title": "SUI LONG - ENTRY FILLED",
       "symbol": "SUIUSDT",
       "interval": "4h",
       "level": 0.6855,
       "direction": "below",
+      "trigger": "touch",
       "notify_wick": false,
       "repeat": false,
-      "note": "Retrace has reached the 50% of the displacement leg. CHoCH was confirmed 8 Aug at 0.7004. Long entry ~0.6855, stop 0.6629, target 0.7083. R:R only 1.01 - thin. Note price must still be holding above 0.6639 for the setup to be alive."
+      "note": "Price traded through the limit - a resting order would be FILLED at 0.6855. Stop 0.6629. Target 0.7083. R:R 1.01."
+    },
+    {
+      "id": "sui-long-stop",
+      "title": "SUI LONG - STOP HIT",
+      "symbol": "SUIUSDT",
+      "interval": "4h",
+      "level": 0.6629,
+      "direction": "below",
+      "trigger": "touch",
+      "notify_wick": false,
+      "repeat": false,
+      "note": "Price traded through the stop. The long is out at -1R."
+    },
+    {
+      "id": "sui-long-target",
+      "title": "SUI LONG - TARGET HIT",
+      "symbol": "SUIUSDT",
+      "interval": "4h",
+      "level": 0.7083,
+      "direction": "above",
+      "trigger": "touch",
+      "notify_wick": false,
+      "repeat": false,
+      "note": "Price reached the target pool at 0.7083. The long is out at +1.01R."
     },
     {
       "id": "sui-long-invalidation",

@@ -56,8 +56,13 @@ for (const rule of cfg.rules || []) {
     if (state[key]?.firedAt === last.openTime) { console.log(`skip   ${key} (already handled this bar)`); continue; }
     if (state[key]?.done && !rule.repeat)      { console.log(`skip   ${key} (one-shot already fired)`); continue; }
 
-    const hit = rule.direction === 'above' ? last.close > rule.level : last.close < rule.level;
-    const wickOnly = rule.direction === 'above'
+    // trigger:"close" (default) = confirmations, the bar must CLOSE past the level.
+    // trigger:"touch"           = fills, a limit executes the instant price trades through.
+    const touch = rule.trigger === 'touch';
+    const hit = touch
+      ? (rule.direction === 'above' ? last.high >= rule.level : last.low <= rule.level)
+      : (rule.direction === 'above' ? last.close > rule.level : last.close < rule.level);
+    const wickOnly = touch ? false : rule.direction === 'above'
       ? last.high > rule.level && last.close <= rule.level
       : last.low  < rule.level && last.close >= rule.level;
 

@@ -2,5 +2,8 @@
   "sui-invalidation": {
     "firedAt": 1786046400000,
     "done": true
+  },
+  "btc-long-trigger": {
+    "firedAt": 1786305600000
   }
 }

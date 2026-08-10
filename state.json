@@ -5,5 +5,13 @@
   },
   "btc-long-trigger": {
     "firedAt": 1786305600000
+  },
+  "btc-short-choch": {
+    "firedAt": 1786377600000,
+    "done": true
+  },
+  "sui-long-entry-zone": {
+    "firedAt": 1786377600000,
+    "done": true
   }
 }

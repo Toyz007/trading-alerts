@@ -36,6 +36,18 @@
       "note": "CHoCH confirmed on the close. Sweep was 64948.8 taken on 7 Aug, wick to 65358. Now wait for the retrace to ~64734 - do not chase. Stop 65403. Target 64010. R:R 1.08."
     },
     {
+      "id": "btc-short-entry",
+      "title": "BTC SHORT - ENTRY LEVEL REACHED",
+      "symbol": "BTCUSDT",
+      "interval": "4h",
+      "level": 64216,
+      "direction": "above",
+      "trigger": "touch",
+      "notify_wick": false,
+      "repeat": false,
+      "note": "Price traded up into the short entry. CHoCH was confirmed 10 Aug at 64017. Stop 65266. Target 62980. R:R 1.18. Entry drifts as the range compresses - re-check the level before acting."
+    },
+    {
       "id": "btc-short-invalidation",
       "title": "BTC SHORT DEAD",
       "symbol": "BTCUSDT",

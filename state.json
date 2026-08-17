@@ -13,5 +13,9 @@
   "sui-long-entry-zone": {
     "firedAt": 1786377600000,
     "done": true
+  },
+  "btc-short-entry": {
+    "firedAt": 1786968000000,
+    "done": true
   }
 }

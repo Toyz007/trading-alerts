@@ -17,5 +17,13 @@
   "btc-short-entry": {
     "firedAt": 1786968000000,
     "done": true
+  },
+  "sui-long-stop": {
+    "firedAt": 1787011200000,
+    "done": true
+  },
+  "sui-long-invalidation": {
+    "firedAt": 1787011200000,
+    "done": true
   }
 }

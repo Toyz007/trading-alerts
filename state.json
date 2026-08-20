@@ -32,6 +32,11 @@
     "done": true
   },
   "sui-decision-level": {
-    "firedAt": 1787140800000
+    "firedAt": 1787169600000,
+    "done": true
+  },
+  "sui-long-target": {
+    "firedAt": 1787169600000,
+    "done": true
   }
 }
